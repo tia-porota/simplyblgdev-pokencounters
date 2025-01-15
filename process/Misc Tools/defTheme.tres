@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://bburoeeq3j52t"]
 
-[ext_resource type="FontFile" uid="uid://d37hlg13ofay7" path="res://kongtext.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://csh2ob12fs7ty" path="res://kongtext.ttf" id="1"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])

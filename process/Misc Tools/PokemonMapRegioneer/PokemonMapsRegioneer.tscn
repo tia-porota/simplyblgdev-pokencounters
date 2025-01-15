@@ -2,20 +2,22 @@
 
 [ext_resource type="Theme" uid="uid://bburoeeq3j52t" path="res://defTheme.tres" id="1"]
 [ext_resource type="Script" path="res://PokemonMapRegioneer/PokemonMapsRegioneer.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://o488ljqqx3uc" path="res://PokemonMapRegioneer/Map/Hoenn.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cywjvr2wakr5x" path="res://PokemonMapRegioneer/Map/Hoenn.png" id="3"]
 [ext_resource type="Script" path="res://PokemonMapRegioneer/Polygon2D.gd" id="4"]
 [ext_resource type="Script" path="res://PokemonMapRegioneer/region.gd" id="5"]
-[ext_resource type="Texture2D" uid="uid://cc7ve8odk4ih7" path="res://PokemonMapRegioneer/Map/Unova.png" id="6"]
-[ext_resource type="Texture2D" uid="uid://b73i7sonlvggt" path="res://PokemonMapRegioneer/Map/Johto4.png" id="7"]
-[ext_resource type="Texture2D" uid="uid://dbmdmtagb6x4a" path="res://PokemonMapRegioneer/Map/Sinnoh.png" id="8"]
-[ext_resource type="Texture2D" uid="uid://bd2g2e2i3xexu" path="res://PokemonMapRegioneer/Map/Unova2.png" id="9"]
-[ext_resource type="Texture2D" uid="uid://mrpmfda4rhm4" path="res://PokemonMapRegioneer/Map/Kalos.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://c4vtg704m2xjj" path="res://PokemonMapRegioneer/Map/Unova.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c41wveempioas" path="res://PokemonMapRegioneer/Map/Johto4.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://7po3r2kh4rlg" path="res://PokemonMapRegioneer/Map/Sinnoh.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cb7s11vit23xk" path="res://PokemonMapRegioneer/Map/Unova2.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://codeapc03xjqs" path="res://PokemonMapRegioneer/Map/Kalos.png" id="10"]
 
 [node name="PokemonMapsRegioneer" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -44.0
+offset_right = -44.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1")
@@ -60,6 +62,7 @@ z_index = 4
 [node name="SeviiIslands" type="Node2D" parent="Polygons"]
 visible = false
 script = ExtResource("5")
+games = PackedStringArray()
 location_ids = "526
 506
 505
@@ -1480,6 +1483,7 @@ script = ExtResource("4")
 location_id = 64
 
 [node name="Johto4" type="Node2D" parent="Polygons"]
+visible = false
 script = ExtResource("5")
 internalName = "Johto4"
 regionName = "johto4"
@@ -3531,7 +3535,6 @@ script = ExtResource("4")
 location_id = 560
 
 [node name="Kalos" type="Node2D" parent="Polygons"]
-visible = false
 script = ExtResource("5")
 internalName = "Unova"
 regionName = "unova2"
@@ -3540,22 +3543,163 @@ generation = 5
 maxDexIx = 649
 baseLocation = "roaming-kalos"
 map = ExtResource("10")
-location_ids = "346
+location_ids = "588
+591
+594
+595
+602
+606
+609
+599
+587
+590
+604
+595
+593
+608
+608
 "
 
-[node name="Nuvema Town" type="Polygon2D" parent="Polygons/Kalos"]
+[node name="Route 1" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(202, 162)
 color = Color(0, 0, 0, 0.376471)
 invert_border = 1.0
-polygon = PackedVector2Array(160, 92, 171, 92, 179, 85, 179, 72, 171, 65, 160, 65, 152, 72, 152, 85)
+polygon = PackedVector2Array(7, 2, 12, 2, 12, 11, 7, 11)
 script = ExtResource("4")
-location_id = 346
+location_id = 588
+is_grass = true
+
+[node name="Route 2" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(202, 138)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(7, 3, 12, 3, 12, 11, 7, 11)
+script = ExtResource("4")
+location_id = 591
+is_grass = true
+
+[node name="Route 3" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(196, 120)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(4, 6, 7, 3, 13, 9, 10, 12)
+script = ExtResource("4")
+location_id = 594
+is_grass = true
+
+[node name="Route 4" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(182, 103)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(-9, -11, -5, -14, 12, 8, 8, 11)
+script = ExtResource("4")
+location_id = 595
+is_grass = true
+
+[node name="Route 5" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(159, 103)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(-6, -12, -2, -9, -20, 12, -24, 9)
+script = ExtResource("4")
+location_id = 602
+is_grass = true
+
+[node name="Route 6" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(121, 90)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(5, 23, 1, 26, -22, 10, -20, 6)
+script = ExtResource("4")
+location_id = 606
+is_grass = true
+
+[node name="Route 7" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(119, 96)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(4, 22, 4, 27, -42, 27, -42, 22)
+script = ExtResource("4")
+location_id = 609
+is_grass = true
+
+[node name="Lumiose City" type="Polygon2D" parent="Polygons/Kalos"]
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(159, 96, 171, 96, 184, 86, 184, 71, 171, 60, 159, 60, 147, 71, 147, 86)
+script = ExtResource("4")
+location_id = 599
+is_grass = true
+
+[node name="Vaniville Town" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(202, 172)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(6, 0, 14, 0, 19, 4, 19, 13, 14, 17, 6, 17, 1, 13, 1, 4)
+script = ExtResource("4")
+location_id = 587
+is_grass = true
+
+[node name="Aquacorde Town" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(202, 148)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(6, 0, 14, 0, 19, 4, 19, 13, 14, 17, 6, 17, 1, 13, 1, 4)
+script = ExtResource("4")
+location_id = 590
+is_grass = true
+
+[node name="Camphrier Town" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(121, 112)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(6, 0, 14, 0, 19, 4, 19, 13, 14, 17, 6, 17, 1, 13, 1, 4)
+script = ExtResource("4")
+location_id = 604
+is_grass = true
+
+[node name="Santalune City" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(187, 111)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(6, 0, 14, 0, 19, 4, 19, 13, 14, 17, 6, 17, 1, 13, 1, 4)
+script = ExtResource("4")
+location_id = 595
+is_grass = true
+
+[node name="Santalune Forest" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(200, 131)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(3, 4, 7, 11, 16, 11, 20, 4, 16, -3, 7, -3)
+script = ExtResource("4")
+location_id = 593
+is_grass = true
+
+[node name="Parfum Palace" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(83, 89)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(3, 4, 7, 11, 16, 11, 20, 4, 16, -3, 7, -3)
+script = ExtResource("4")
+location_id = 608
+is_grass = true
+
+[node name="Santalune Forest3" type="Polygon2D" parent="Polygons/Kalos"]
+position = Vector2(59, 116)
+color = Color(0, 0, 0, 0.376471)
+invert_border = 1.0
+polygon = PackedVector2Array(4, 4, 8, 11, 15, 11, 19, 4, 15, -3, 8, -3)
+script = ExtResource("4")
+location_id = 608
 is_grass = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 362.0
-offset_bottom = 145.0
-texture = ExtResource("7")
+offset_right = 320.0
+offset_bottom = 210.0
+texture = ExtResource("10")
+metadata/_edit_lock_ = true
 
 [connection signal="visibility_changed" from="Polygons" to="." method="_on_Polygons_visibility_changed"]
 [connection signal="visibility_changed" from="Polygons/SeviiIslands" to="." method="_on_map_vis"]

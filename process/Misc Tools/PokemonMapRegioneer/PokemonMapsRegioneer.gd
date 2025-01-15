@@ -67,4 +67,5 @@ func _on_map_vis():
 	for child in $Polygons.get_children():
 		if child.visible:
 			$TextureRect.texture = child.map
+			$TextureRect.size = $TextureRect.texture.size
 			return
